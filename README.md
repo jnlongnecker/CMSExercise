@@ -1,1 +1,97 @@
-# CMSExercise
+- Create an `Experience Site` (if you have one, skip to the next step)
+    - Enable `Digital Experiences`, if not done already
+    - Navigate to `Setup`
+    - Go to `Feature Settings > Digital Experiences > All Sites`
+    - Click on `New`
+    - Choose the Partner Central `template`
+    - Click `Get Started`
+    - Fill out the fields:
+        - Store Name: `Partner Site`
+        - URL: `solarpartner`
+    - Click `Create`
+    - Once it has completed, navigate back to `Setup`
+        - Click on the home icon at the top left of the page
+        - Click on the `Salesforce Setup` link
+- Open the Digital Experiences Home app page
+    - Click on the App Launcher (9 dots at the top left)
+    - Search for `Digital Experiences Home` and click on the Digital Experiences Home item
+- Create a new workspace
+    - Click on the `Create a CMS Workspace` button near the top of the page
+    - Fill out the fields:
+        - Name: `Installation Pictures`
+        - Description: `Professionally photographed images of our various solar panel installations, designed for marketing purposes.`
+    - Click `Next`
+    - In the search bar, search for `Partner Site`
+    - Click the `+` button next to the Partner Site row
+    - Click `Next`
+    - Click the `+` button next to the Integration User row
+    - Click `Next`
+    - Assign the `Content Manager` role to the Integration User
+    - Click `Next`
+    - Using the arrows in the middle, move the following languages to the right side in the `Selected` box:
+        - English (United States)
+        - Japanese
+        - Korean
+    - Set the Default Language to English (United States)
+    - Click `Next`
+    - Click `Done`
+- Add `content` to the workspace
+    - Download the supplied zip file
+    - Click the `v` dropdown arrow at the top right and select the `Import Content` action
+    - Open the zip file you downloaded earlier
+    - Click the checkbox next to `Publish content after import`
+    - Click `Import`
+    - Click `Ok`
+    - Refresh the page once you receive an email telling you the import was successful
+- Go to your `Experience Site` workspace
+    - Navigate to `Setup`
+    - Go to `Feature Settings > Digital Experiences > All Sites`
+    - Click the `Workspaces` link next to the Partner Site row
+- Make a new `topic`
+    - Go to the `Content Management` tile
+    - Click on the `Topics` tab at the top
+    - Click on the `New` action at the top left
+    - Fill out the fields:
+        - Name: `frontpage`
+        - Description: `Assign to content that should be displayed as marketing images on the front page.`
+        - Enable for content: `Checked`
+    - Click `Save`
+- Add `topic` to all `content`
+    - Click on the `Content` tab at the top
+    - Click on `Solar Field Strip`
+    - In the `Topics` panel to the right, type in `frontpage` and press `Enter`
+    - Repeat the prior 2 steps for `Panel Installation (Ground)`, `Solar Farm`, and `Panel Installation (Roof)`
+- Make a new `collection`
+    - Click on the `Collections` tab at the top
+    - Click the `Create Collection` button at the bottom
+    - Fill out the fields:
+        - Name: `Marketing Photos`
+        - Select Content Source: `CMS Content` (already selected)
+    - Click `Next`
+    - Fill out the fields:
+        - Type: `Image`
+        - How would you like to curate your collection? `Conditionally`
+    - Click `Next`
+    - Enter the following criteria:
+        - Rule for Finding Content: `All Criteria are Met` (already selected)
+        - Filter By: `Topic` (already selected)
+        - When: `Includes` (already selected)
+        - Value: `frontpage`
+    - Click `Finish`
+- Display `collection` on the home page
+    - Click the `#` icon at the top left
+    - Select the `Builder` option
+    - Click the Components button (lightning bolt icon on the left)
+    - Click and drag the CMS Collection component to the page, below the welcome text
+    - Click on the CMS Collection component you just added
+    - Click on the `+ Add Collection` button on the popup to the top right of the page
+    - Select the Marketing Photos `collection` and click `Save`
+- Customize the CMS Collection component
+    - Click on the `Collection Layout` accordion
+    - Change the layout from `Grid` to `Carousel`
+    - Click on the `Content Layout` accordion
+    - Change the layout from `Banner` to `Tile`
+    - Click on the `Field Mappings` accordion
+    - Change the `Image` from `None` to `Source`
+    - Click on the page to get rid of the popup
+- Click on the `Preview` option to demo the new marketing carousel!
